@@ -1,0 +1,71 @@
+<div class="container" style="max-width: 400px;">
+    <form (ngSubmit)="addStudent()" autocomplete="off" #userForm="ngForm">
+        <h2>ADD USER</h2>
+        <div *ngIf="userForm.invalid" class="error-message">Please Fill All The Details</div>
+        <div>
+            <label>Name</label>
+            <input type="text" name="name" [(ngModel)]="add.name" class="form-control" required pattern="[a-zA-Z]+" #name="ngModel">
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-message">
+                <div *ngIf="name.errors?.['required']">Name is required.</div>
+                <div *ngIf="name.errors?.['pattern']">Name must be entered as text.</div>
+            </div>
+        </div>
+        <div>
+            <label>Rollno</label>
+            <input type="number" name="rollno" [(ngModel)]="add.id" class="form-control" required pattern="^[0-9]+$" #rollno="ngModel">
+            <div *ngIf="rollno.invalid && (rollno.dirty || rollno.touched)" class="error-message">
+                <div *ngIf="rollno.errors?.['required']">Rollno is required.</div>
+                <div *ngIf="rollno.errors?.['pattern']">Rollno must be a number.</div>
+            </div>
+        </div>
+            
+        
+        <div>
+            <label>Department</label>
+            <input type="text" name="dept" [(ngModel)]="add.dept" class="form-control" required pattern="[a-zA-Z]+" #dept="ngModel">
+            <div *ngIf="dept.invalid && (dept.dirty || dept.touched)" class="error-message">
+                <div *ngIf="dept.errors?.['required']">Department is required.</div>
+                <div *ngIf="dept.errors?.['pattern']">Department must be entered as text.</div>
+            </div>
+        </div>
+        <div>
+            <label>Passed-out Year</label>
+            <input type="text" name="poy" [(ngModel)]="add.poy" class="form-control" required pattern="^[0-9]+$" #poy="ngModel">
+            <div *ngIf="poy.invalid && (poy.dirty || poy.touched)" class="error-message">
+                <div *ngIf="poy.errors?.['required']">Passed-out Year is required.</div>
+                <div *ngIf="poy.errors?.['pattern']">Passed-out Year must be a number.</div>
+                
+            </div>
+        </div>
+        <div>
+            <label>Age</label>
+            <input type="text" name="age" [(ngModel)]="add.age" class="form-control" required pattern="^[0-9]+$" #age="ngModel">
+            <div *ngIf="age.invalid && (age.dirty || age.touched)" class="error-message">
+                <div *ngIf="age.errors?.['required']">Age is required.</div>
+                <div *ngIf="age.errors?.['pattern']">Age must be a number.</div>
+            </div>
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="text" name="email" [(ngModel)]="add.email" class="form-control" required email #email="ngModel">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+                <div *ngIf="email.errors?.['required']">Email is required.</div>
+                <div *ngIf="email.errors?.['email']">Invalid email format.</div>
+            </div>
+        </div>
+        <div>
+            <label>Phone Number</label>
+            <input type="text" name="phone" [(ngModel)]="add.phone" class="form-control" required pattern="^[0-9]+$" #phone="ngModel">
+            <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="error-message">
+                <div *ngIf="phone.errors?.['required']">Phone Number is required.</div>
+                <div *ngIf="phone.errors?.['pattern']">Phone Number must be a number.</div>
+            </div>
+        </div>
+        
+        <p id="bottombtn">
+            <input type="submit" value="Add"  id="add" class="btn btn-primary" [disabled]="userForm.invalid">&nbsp;
+            
+            <input type="button" value="Users List" id="userslist" class="btn btn-primary" routerLink="/list" >
+        </p>
+    </form>
+</div>

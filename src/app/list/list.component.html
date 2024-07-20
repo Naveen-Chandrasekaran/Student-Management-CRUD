@@ -1,0 +1,43 @@
+<div class="container" >
+    <input type="button" value="Add Users" id="addbtn" class="btn btn-info" routerLink="/add" autocomplete="off">
+    <br>
+    <br>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Age</th>
+                <th>Passed-Out Year</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of ulist,let i=index">
+                <td>{{i+1}}</td>
+                <td>{{u.id}}</td>
+                <td>{{u.name}}</td>
+                <td>{{u.dept}}</td>
+                <td>{{u.age}}</td>
+                <td>{{u.poy}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.phone}}</td>
+                <td>
+                    <span>
+                        <input type="submit" value="Edit" id="edit" class="btn btn-outline-primary " routerLink="/edit/{{u.id}}">&nbsp;
+                        <input type="button" value="Delete" id="delete" class="btn btn-outline-danger" (click)="delStudent(u.id)">
+
+                    </span>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+</div>

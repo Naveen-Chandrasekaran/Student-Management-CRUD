@@ -1,0 +1,97 @@
+.container{
+    margin-top:50px;
+    margin-bottom: 50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 35px;
+  
+}
+h2{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    
+}
+label{
+    font-weight: 500;
+    
+}
+
+input{
+    border-radius: 15px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    
+}
+#add{
+    width: 250px;
+    margin-bottom: 20px;
+    
+   
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: #fff;
+    background-color: #3c4fe0;
+    height: 48px;
+
+
+    
+}
+
+#add:hover {
+    box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #1ED760;
+    transform: translateY(-2px);
+}
+#userslist{
+   
+    width: 250px;
+    
+
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: #fff;
+    background-color: #3c4fe0;
+    height: 48px;
+    
+
+
+}
+.error-message{
+    color: red;
+    padding-left: 10px;
+    font-size: 15px;
+}
+#userslist:hover{
+    transform: scale(1.04);
+    background-color: #21e065;
+} 
+#bottombtn{
+   padding: 20px;
+   margin-left: 20px;
+}
