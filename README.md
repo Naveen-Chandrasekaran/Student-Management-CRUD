@@ -2,7 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
 
-#Screen Shots
+# Screen Shots
+![Screenshot 2024-08-07 212524](https://github.com/user-attachments/assets/cadd36bc-138e-48fc-aec7-2a80182c0146)
 ![Screenshot 2024-08-07 212611](https://github.com/user-attachments/assets/432cab94-83c2-4555-a9d1-191ac7da4f3d)
 
 
